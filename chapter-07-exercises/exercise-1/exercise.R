@@ -2,20 +2,22 @@
 
 # Create a vector `names` that contains your name and the names of 2 people 
 # next to you. Print the vector.
+name <- c("Sam", "Thomas", "Ifrah")
 
 
 # Use the colon operator : to create a vector `n` of numbers from 10:49
-
+n <- 10:49
 
 # Use the `length()` function to get the number of elements in `n`
-
+length(n)
 
 # Add 1 to each element in `n` and print the result
-
+print(n + 1)
 
 # Create a vector `m` that contains the numbers 10 to 1 (in that order). 
 # Hint: use the `seq()` function
-
+m <- seq(1, 10, -1)
+print(m)
 
 # Subtract `m` FROM `n`. Note the recycling!
 
