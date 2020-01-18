@@ -17,14 +17,19 @@ print(eleventh)
 
 # Create a vector `some_numbers` that contains the 2nd through the 5th elements 
 # of `all_numbers`
-
+some_numbers <- all_number[2:5]
+print(some_numbers)
 
 
 # Create a vector `even` that holds the even numbers from 1 to 100
-
+even <- c(seq(1, 100, 2) + 1)
+print(even)
 
 # Using the `all()` function and `%%` (modulo) operator, confirm that all of the
 # numbers in your `even` vector are even
+if(all(even%%2)){
+  print("TRUE")
+}
 
 
 
