@@ -1,10 +1,14 @@
 # Exercise 5: dplyr grouped operations
 
+install.packages("dplyr")
+install.packages("nycflights13")
 # Install the `"nycflights13"` package. Load (`library()`) the package.
 # You'll also need to load `dplyr`
 #install.packages("nycflights13")  # should be done already
 library("nycflights13")
 library("dplyr")
+
+View(nycflight13)
 
 # What was the average departure delay in each month?
 # Save this as a data frame `dep_delay_by_month`
@@ -28,4 +32,10 @@ library("dplyr")
 
 
 # Which city was flown to with the highest average speed?
+flights %>%
+  group_by(dest) %>%
+  summarize(
+    avg_speed = mean(distance/air_time, na.rm = TRUE)
+  ) %>%
+  filter(avg_speed == max(avg_speed, na.rm = TRUE))
 
